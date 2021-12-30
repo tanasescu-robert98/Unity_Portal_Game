@@ -6,6 +6,13 @@ public class Character_Movement : MonoBehaviour
 {
     public CharacterController controller;
 
+    public GameObject Portal_SpawnArea1;
+    public GameObject Portal_SpawnArea2;
+    public GameObject Portal_SpawnArea3;
+    public GameObject Portal_World1;
+    public GameObject Portal_World2;
+    public GameObject Portal_World3;
+
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -48,21 +55,42 @@ public class Character_Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("TEST");
         if (other.tag == "Portal_Tag")
         {
-            Debug.Log("TES2T");
-            if (other.gameObject.name == "Portal_Trigger")
+            if (other.gameObject.name == "Portal_Trigger_SpawnArea1")
             {
                 controller.enabled = false;
-                controller.transform.position = new Vector3(6, 1, 210);
+                controller.transform.position = Portal_World1.transform.position + new Vector3(4, 0, 3);
                 controller.enabled = true;
             }
-            else if(other.gameObject.name == "Portal_Trigger_2")
+            else if (other.gameObject.name == "Portal_Trigger_SpawnArea2")
             {
                 controller.enabled = false;
-                controller.transform.position = new Vector3(6, 1, 21);
-                //controller.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+                controller.transform.position = Portal_World2.transform.position + new Vector3(4, 0, 3);
+                controller.enabled = true;
+            }
+            else if (other.gameObject.name == "Portal_Trigger_SpawnArea3")
+            {
+                controller.enabled = false;
+                controller.transform.position = Portal_World3.transform.position + new Vector3(4, 0, 3);
+                controller.enabled = true;
+            }
+            else if(other.gameObject.name == "Portal_Trigger_World1")
+            {
+                controller.enabled = false;
+                controller.transform.position = Portal_SpawnArea1.transform.position - new Vector3(-4, 0, 4);
+                controller.enabled = true;
+            }
+            else if (other.gameObject.name == "Portal_Trigger_World2")
+            {
+                controller.enabled = false;
+                controller.transform.position = Portal_SpawnArea2.transform.position - new Vector3(-4, 0, 4);
+                controller.enabled = true;
+            }
+            else if (other.gameObject.name == "Portal_Trigger_World3")
+            {
+                controller.enabled = false;
+                controller.transform.position = Portal_SpawnArea3.transform.position - new Vector3(-4, 0, 4);
                 controller.enabled = true;
             }
         }
