@@ -54,8 +54,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\MouseLook.cs" />
-    <Compile Include="Assets\Scripts\Player\Character_Movement.cs" />
     <Compile Include="Assets\Crosshair.cs" />
+    <Compile Include="Assets\Scripts\Player\Character_Movement.cs" />
+    <Compile Include="Assets\Portal_Teleport.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

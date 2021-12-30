@@ -20,6 +20,8 @@ public class Character_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -42,5 +44,27 @@ public class Character_Movement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("TEST");
+        if (other.tag == "Portal_Tag")
+        {
+            Debug.Log("TES2T");
+            if (other.gameObject.name == "Portal_Trigger")
+            {
+                controller.enabled = false;
+                controller.transform.position = new Vector3(6, 1, 210);
+                controller.enabled = true;
+            }
+            else if(other.gameObject.name == "Portal_Trigger_2")
+            {
+                controller.enabled = false;
+                controller.transform.position = new Vector3(6, 1, 21);
+                //controller.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+                controller.enabled = true;
+            }
+        }
     }
 }
