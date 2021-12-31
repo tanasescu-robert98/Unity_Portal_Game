@@ -63,7 +63,7 @@ public class Character_Movement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             Vrum_Vrum.gameObject.transform.position = controller.transform.position;
         }
-        if (Input.GetKey(KeyCode.C) && !isGrounded)
+        if (Input.GetKey(KeyCode.C))
         {
             velocity.y = -Mathf.Sqrt(jumpHeight * -12f * gravity);
         }
