@@ -41,15 +41,28 @@ public class Character_Movement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 25;
+            controller.Move(move * speed * Time.deltaTime);
+        }
+        else
+        {
+            speed = 12;
+            controller.Move(move * speed * Time.deltaTime);
+        }
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
         if (Input.GetButton("Jump") && !isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+        if (Input.GetKey(KeyCode.C) && !isGrounded)
+        {
+            velocity.y = -Mathf.Sqrt(jumpHeight * -12f * gravity);
         }
 
 
