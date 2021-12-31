@@ -1392,7 +1392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &504876546
 Transform:
   m_ObjectHideFlags: 0
@@ -1488,9 +1488,9 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -12117,6 +12117,7 @@ GameObject:
   - component: {fileID: 2117204781}
   - component: {fileID: 2117204783}
   - component: {fileID: 2117204784}
+  - component: {fileID: 2117204785}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -12200,6 +12201,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crosshair_canvas: {fileID: 1580755531}
+--- !u!114 &2117204785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117204780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12509c24f196b44aae7023e9a086f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MuzzleFlash: {fileID: 504876548}
 --- !u!1 &2134800634
 GameObject:
   m_ObjectHideFlags: 0
