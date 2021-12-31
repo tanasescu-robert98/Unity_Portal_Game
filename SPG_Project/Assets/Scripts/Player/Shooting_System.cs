@@ -28,7 +28,8 @@ public class Shooting_System : MonoBehaviour
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out Hit))
         {
             Debug.Log(Hit.transform.name);
-            //Destroy(Hit.transform.gameObject);
+            if(Hit.transform.gameObject.name.Contains("Enemy"))
+                Hit.transform.gameObject.GetComponent<Enemy>().health -= 20;
         }
     }
 }
