@@ -6,6 +6,8 @@ public class Character_Movement : MonoBehaviour
 {
     public CharacterController controller;
 
+    public GameObject Vrum_Vrum;
+
     public GameObject Portal_SpawnArea1;
     public GameObject Portal_SpawnArea2;
     public GameObject Portal_SpawnArea3;
@@ -59,6 +61,7 @@ public class Character_Movement : MonoBehaviour
         if (Input.GetButton("Jump") && !isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Vrum_Vrum.gameObject.transform.position = controller.transform.position;
         }
         if (Input.GetKey(KeyCode.C) && !isGrounded)
         {
