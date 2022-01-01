@@ -57,9 +57,15 @@
     <Compile Include="Assets\Scripts\Player\Shooting_System.cs" />
     <Compile Include="Assets\Scripts\Player\Crosshair.cs" />
     <Compile Include="Assets\Scripts\Portal_Teleport.cs" />
+    <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\Character_Movement.cs" />
     <Compile Include="Assets\Scripts\Open_Door.cs" />
-    <Compile Include="Assets\Enemy.cs" />
+    <Compile Include="Assets\Portal_Camera.cs" />
+    <Compile Include="Assets\Portal_TextureSetup.cs" />
+    <Compile Include="Assets\Player_TeleportScript.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\ScreenCutoutShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
