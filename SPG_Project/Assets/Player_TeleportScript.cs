@@ -32,7 +32,6 @@ public class Player_TeleportScript : MonoBehaviour
 
             if (dotProduct < 0f)
             {
-                Debug.Log("PLM");
 
                 player_controller.enabled = false;
 
@@ -40,17 +39,15 @@ public class Player_TeleportScript : MonoBehaviour
                 rotationDiff += 180;
                 player.Rotate(Vector3.up, rotationDiff);
 
-                Debug.Log(player.position);
 
                 Vector3 positionOffset = Quaternion.Euler(0f, rotationDiff, 0f) * portalToPlayer;
                 player.position = receiver.position + positionOffset;
 
-                Debug.Log("PLM2");
-                Debug.Log(receiver.position);
 
-                player_controller.enabled = true;
 
                 playerIsOVerLapping = false;
+
+                player_controller.enabled = true;
 
             }
 
