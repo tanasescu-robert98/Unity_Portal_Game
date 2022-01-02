@@ -63,10 +63,13 @@
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\Character_Movement.cs" />
     <Compile Include="Assets\Scripts\Open_Door.cs" />
+    <Compile Include="Assets\race-track-lake\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ScreenCutoutShader.shader" />
+    <None Include="Assets\race-track-lake\readmore.txt" />
     <None Include="Assets\ScreenCutoutShader2.shader" />
+    <None Include="Assets\race-track-lake\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
