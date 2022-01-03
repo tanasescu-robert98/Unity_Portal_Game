@@ -16,18 +16,36 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.isPlayerinLake = false;
                     UIManager.isPlayerinVillage = false;
                     UIManager.isPlayerinSpawnRoom = false;
+                    UIManager.Hint1_show = false;
+                    UIManager.Hint2_show = false;
+                    UIManager.Hint3_show = false;
                     break;
                 case "Lake_Trigger":
                     UIManager.isPlayerinIndustrial = false;
                     UIManager.isPlayerinLake = true;
                     UIManager.isPlayerinVillage = false;
                     UIManager.isPlayerinSpawnRoom = false;
+                    UIManager.Hint1_show = false;
+                    UIManager.Hint2_show = false;
+                    UIManager.Hint3_show = false;
                     break;
                 case "Village_Trigger":
                     UIManager.isPlayerinIndustrial = false;
                     UIManager.isPlayerinLake = false;
                     UIManager.isPlayerinVillage = true;
                     UIManager.isPlayerinSpawnRoom = false;
+                    UIManager.Hint1_show = false;
+                    UIManager.Hint2_show = false;
+                    UIManager.Hint3_show = false;
+                    break;
+                case "Spawn_Trigger":
+                    UIManager.isPlayerinIndustrial = false;
+                    UIManager.isPlayerinLake = false;
+                    UIManager.isPlayerinVillage = false;
+                    UIManager.isPlayerinSpawnRoom = true;
+                    UIManager.Hint1_show = false;
+                    UIManager.Hint2_show = false;
+                    UIManager.Hint3_show = false;
                     break;
             }
         }
