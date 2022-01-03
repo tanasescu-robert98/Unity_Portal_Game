@@ -58,7 +58,6 @@ public class Player_TeleportScript : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("SAL");
             playerIsOVerLapping = true;
         }
     }
@@ -67,8 +66,6 @@ public class Player_TeleportScript : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log("SAL2");
-
             playerIsOVerLapping = false;
         }
     }
