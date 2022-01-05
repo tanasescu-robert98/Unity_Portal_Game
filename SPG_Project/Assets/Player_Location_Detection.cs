@@ -19,6 +19,9 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.Hint1_show = false;
                     UIManager.Hint2_show = false;
                     UIManager.Hint3_show = false;
+                    UIManager.Hint4_show = false;
+                    UIManager.Hint5_show = false;
+                    UIManager.Hint6_show = false;
                     break;
                 case "Lake_Trigger":
                     UIManager.isPlayerinIndustrial = false;
@@ -28,6 +31,9 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.Hint1_show = false;
                     UIManager.Hint2_show = false;
                     UIManager.Hint3_show = false;
+                    UIManager.Hint4_show = false;
+                    UIManager.Hint5_show = false;
+                    UIManager.Hint6_show = false;
                     break;
                 case "Village_Trigger":
                     UIManager.isPlayerinIndustrial = false;
@@ -37,6 +43,9 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.Hint1_show = false;
                     UIManager.Hint2_show = false;
                     UIManager.Hint3_show = false;
+                    UIManager.Hint4_show = false;
+                    UIManager.Hint5_show = false;
+                    UIManager.Hint6_show = false;
                     break;
                 case "Spawn_Trigger":
                     UIManager.isPlayerinIndustrial = false;
@@ -46,6 +55,9 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.Hint1_show = false;
                     UIManager.Hint2_show = false;
                     UIManager.Hint3_show = false;
+                    UIManager.Hint4_show = false;
+                    UIManager.Hint5_show = false;
+                    UIManager.Hint6_show = false;
                     break;
             }
         }
