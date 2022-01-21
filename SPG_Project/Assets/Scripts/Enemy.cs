@@ -64,9 +64,42 @@ public class Enemy : MonoBehaviour
         }
 
         //if(Input.GetKeyDown(KeyCode.J))
-        if(seconds > 3 & Player_has_been_seen == true)
+        if (seconds > 3 & Player_has_been_seen == true)
         {
-            Instantiate(Projectile, transform.position, transform.rotation);
+            Debug.Log(transform.forward.x);
+            Debug.Log(transform.forward.z);
+            if (transform.name.Contains("Green"))
+            {
+                
+                if(transform.forward.x > 0 && transform.forward.z > 0)
+                {
+                    Instantiate(Projectile, transform.position + new Vector3(0, 0, 2), transform.rotation);
+                    Instantiate(Projectile, transform.position, transform.rotation);
+                    Instantiate(Projectile, transform.position + new Vector3(0, 0, -2), transform.rotation);
+                }
+                else if(transform.forward.z < 0 && transform.forward.x < 0)
+                {
+                    Instantiate(Projectile, transform.position + new Vector3(2, 0, 0), transform.rotation);
+                    Instantiate(Projectile, transform.position, transform.rotation);
+                    Instantiate(Projectile, transform.position + new Vector3(-2, 0, 0), transform.rotation);
+                }
+                else if (transform.forward.z > 0 && transform.forward.x < 0)
+                {
+                    Instantiate(Projectile, transform.position + new Vector3(2, 0, 0), transform.rotation);
+                    Instantiate(Projectile, transform.position, transform.rotation);
+                    Instantiate(Projectile, transform.position + new Vector3(-2, 0, 0), transform.rotation);
+                }
+                else if (transform.forward.z < 0 && transform.forward.x > 0)
+                {
+                    Instantiate(Projectile, transform.position + new Vector3(0, 0, 2), transform.rotation);
+                    Instantiate(Projectile, transform.position, transform.rotation);
+                    Instantiate(Projectile, transform.position + new Vector3(0, 0, -2), transform.rotation);
+                }
+            }
+            else
+            { 
+                Instantiate(Projectile, transform.position, transform.rotation);
+            }
             timer = 0.0f;
         }
 
