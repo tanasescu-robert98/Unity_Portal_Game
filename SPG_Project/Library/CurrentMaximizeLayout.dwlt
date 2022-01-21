@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 578, y: 442}
-  m_MaxSize: {x: 12003, y: 8042}
+  m_MinSize: {x: 577, y: 421}
+  m_MaxSize: {x: 12002, y: 8042}
   vertical: 0
-  controlID: 10379
+  controlID: 8954
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 0
     width: 1368
     height: 947
-  m_MinSize: {x: 303, y: 442}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 301, y: 421}
+  m_MaxSize: {x: 8001, y: 8042}
   vertical: 1
-  controlID: 10342
+  controlID: 8955
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -202,9 +202,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 113.93532, y: 2.693502, z: -10.098838}
+    m_Target: {x: 681.23193, y: 0.82106555, z: 29.346693}
     speed: 2
-    m_Value: {x: 113.93532, y: 2.693502, z: -10.098838}
+    m_Value: {x: 681.23193, y: 0.82106555, z: 29.346693}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -251,13 +251,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Target: {x: 0.097026825, y: -0.11235304, z: 0.011086901, w: 0.98889315}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: 0.097023435, y: -0.112349115, z: 0.011086513, w: 0.98885864}
   m_Size:
-    m_Target: 0.36791295
+    m_Target: 5.062195
     speed: 2
-    m_Value: 0.36791295
+    m_Value: 5.062195
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -303,10 +303,10 @@ MonoBehaviour:
     y: 551
     width: 1368
     height: 396
-  m_MinSize: {x: 303, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 301, y: 200}
+  m_MaxSize: {x: 8001, y: 4021}
   vertical: 0
-  controlID: 10343
+  controlID: 8920
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -372,22 +372,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sounds
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sounds
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Github\SPG_Project\SPG_Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: decf0000
-    m_LastClickedID: 53214
-    m_ExpandedIDs: 000000002e6b000000ca9a3b
+    m_SelectedIDs: 88650000
+    m_LastClickedID: 25992
+    m_ExpandedIDs: 000000005e53000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -415,7 +415,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e6b000000ca9a3b
+    m_ExpandedIDs: 000000005e53000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -440,8 +440,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 8c590000
-    m_LastClickedInstanceID: 22924
+    m_SelectedInstanceIDs: 90090000
+    m_LastClickedInstanceID: 2448
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000b0420000
     m_RenameOverlay:
@@ -515,8 +515,8 @@ MonoBehaviour:
     y: 0
     width: 456
     height: 396
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -552,7 +552,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a2e7ffffd05a00000c5b00003c5c0000985d0000
+      m_ExpandedIDs: 0a9effff6aaeffff6efbffff70fbffff4a410000ae42000014450000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -633,7 +633,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -6514
+  m_LastInspectedObjectInstanceID: 16778
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:

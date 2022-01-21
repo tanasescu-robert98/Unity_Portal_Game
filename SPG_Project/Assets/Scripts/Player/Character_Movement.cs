@@ -15,6 +15,8 @@ public class Character_Movement : MonoBehaviour
     public GameObject Portal_World2;
     public GameObject Portal_World3;
 
+    public static bool Jetpack_Equiped;
+
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
@@ -25,6 +27,11 @@ public class Character_Movement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+
+    private void Start()
+    {
+        Jetpack_Equiped = false;
+    }
 
     // Update is called once per frame
     void Update()
@@ -58,7 +65,7 @@ public class Character_Movement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-        if (Input.GetButton("Jump") && !isGrounded)
+        if (Input.GetButton("Jump") && !isGrounded && Jetpack_Equiped == true)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             Vrum_Vrum.gameObject.transform.position = controller.transform.position;
