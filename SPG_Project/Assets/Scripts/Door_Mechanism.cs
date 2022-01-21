@@ -32,8 +32,8 @@ public class Door_Mechanism : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Open_Door = true;
-            Debug.Log("SAL");
+            if(UIManager.Industrial_Collected_Pickups == 3)
+                Open_Door = true;
         }
     }
 }
