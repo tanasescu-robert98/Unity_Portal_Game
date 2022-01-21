@@ -39,7 +39,7 @@ public class Shooting_System : MonoBehaviour
         {
             Debug.Log(Hit.transform.name);
             if (Hit.transform.gameObject.name.Contains("Enemy"))
-            Hit.transform.gameObject.GetComponent<Enemy>().health -= 20;
+                Hit.transform.gameObject.GetComponent<Enemy>().health -= 20;
         }
     }
 }
