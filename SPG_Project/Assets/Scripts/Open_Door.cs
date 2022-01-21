@@ -43,7 +43,6 @@ public class Open_Door : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("SAL");
         if(other.tag == "Player")
         {
             MoveUp = true;

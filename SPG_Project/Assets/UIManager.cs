@@ -12,6 +12,11 @@ public class UIManager : MonoBehaviour
     public static bool isPlayerinVillage;
 
     public TMP_Text UI_Text_Location;
+    public TMP_Text UI_Pickups_Counter;
+
+    public static int Industrial_Collected_Pickups;
+    public static int Industrial_Max_Pickups;
+
     public GameObject Black_Screen;
     public Image Hint1;
     public Image Hint2;
@@ -51,17 +56,21 @@ public class UIManager : MonoBehaviour
         isPlayerinVillage = false;
         Black_Screen.SetActive(false);
         UI_Text_Location.gameObject.SetActive(false);
+        UI_Pickups_Counter.gameObject.SetActive(false);
         Hint1.gameObject.SetActive(false);
         Hint2.gameObject.SetActive(false);
         Hint3.gameObject.SetActive(false);
         Hint4.gameObject.SetActive(false);
         Hint5.gameObject.SetActive(false);
         Hint6.gameObject.SetActive(false);
+        Industrial_Collected_Pickups = 0;
+        Industrial_Max_Pickups = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
+        UI_Pickups_Counter.text = Industrial_Collected_Pickups.ToString() + "/" + Industrial_Max_Pickups.ToString() + " Pickups";
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             Cursor.visible = true;
@@ -91,6 +100,8 @@ public class UIManager : MonoBehaviour
             }
             //UI_Text_Location.text = "Industrial Area";
             UI_Text_Location.gameObject.SetActive(true);
+            if(isPlayerinIndustrial)
+                UI_Pickups_Counter.gameObject.SetActive(true);
         }
         else if(Input.GetKeyUp(KeyCode.Tab))
         {
@@ -106,11 +117,13 @@ public class UIManager : MonoBehaviour
             Hint5.gameObject.SetActive(false);
             Hint6.gameObject.SetActive(false);
             UI_Text_Location.gameObject.SetActive(false);
+            UI_Pickups_Counter.gameObject.SetActive(false);
         }
 
         if(isPlayerinIndustrial)
         {
             UI_Text_Location.text = "Industrial Area";
+            UI_Pickups_Counter.text = Industrial_Collected_Pickups.ToString() + "/" + Industrial_Max_Pickups.ToString() + " Pickups";
             Hint1.rectTransform.position = new Vector3(Hint1.rectTransform.position.x, 450, Hint1.rectTransform.position.z);
             Hint2.rectTransform.position = new Vector3(Hint2.rectTransform.position.x, 450, Hint2.rectTransform.position.z);
             Hint3.rectTransform.position = new Vector3(Hint3.rectTransform.position.x, 450, Hint3.rectTransform.position.z);
