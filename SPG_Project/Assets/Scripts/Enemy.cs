@@ -110,6 +110,10 @@ public class Enemy : MonoBehaviour
             { 
                 Instantiate(Projectile, transform.position, transform.rotation);
             }
+            else if (transform.name.Contains("Blue"))
+            {
+                Instantiate(Projectile, transform.position, transform.rotation);
+            }
             timer = 0.0f;
         }
 
@@ -127,6 +131,8 @@ public class Enemy : MonoBehaviour
         {
             explosion_sound.Play();
             Instantiate(Explosion, transform.position, transform.rotation);
+            if(transform.name.Contains("Blue"))
+                Destroy(gameObject.GetComponent<Enemy_Blue_Move_Script>().particle_system);
             Destroy(gameObject);
         }
 
