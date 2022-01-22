@@ -37,7 +37,6 @@ public class Shooting_System : MonoBehaviour
         gun_sound.Play();
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out Hit))
         {
-            Debug.Log(Hit.transform.name);
             if (Hit.transform.gameObject.name.Contains("Enemy"))
                 Hit.transform.gameObject.GetComponent<Enemy>().health -= 20;
         }

@@ -14,11 +14,14 @@ public class Enemy : MonoBehaviour
 
     public GameObject Player;
     public GameObject Projectile;
+    public GameObject Projectile_Black;
     public ParticleSystem Explosion;
     public LayerMask Mask_for_see;
     public AudioSource explosion_sound;
 
-    float timer = 0.0f;
+    private float timer = 0.0f;
+
+    private float timer_rapid_fire = 0.0f;
 
     private bool Player_has_been_seen = false;
 
@@ -34,7 +37,9 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        timer_rapid_fire += Time.deltaTime;
         float seconds = timer % 60;
+        float seconds_rapid_fire = timer_rapid_fire % 60;
 
         float distance_to_player = Vector3.Distance(Player.transform.position, transform.position);
 
@@ -63,48 +68,61 @@ public class Enemy : MonoBehaviour
             Player_has_been_seen = false;
         }
 
-        //if(Input.GetKeyDown(KeyCode.J))
-        if (seconds > 3 & Player_has_been_seen == true)
+        if (seconds > 1 && Player_has_been_seen == true)
         {
-            Debug.Log(transform.forward.x);
-            Debug.Log(transform.forward.z);
             if (transform.name.Contains("Green"))
             {
                 
                 if(transform.forward.x > 0 && transform.forward.z > 0)
                 {
+                    Debug.Log("SAL1");
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, 2), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, -2), transform.rotation);
                 }
                 else if(transform.forward.z < 0 && transform.forward.x < 0)
                 {
+                    Debug.Log("SAL2");
                     Instantiate(Projectile, transform.position + new Vector3(2, 0, 0), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(-2, 0, 0), transform.rotation);
                 }
                 else if (transform.forward.z > 0 && transform.forward.x < 0)
                 {
+                    Debug.Log("SAL3");
                     Instantiate(Projectile, transform.position + new Vector3(2, 0, 0), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(-2, 0, 0), transform.rotation);
                 }
                 else if (transform.forward.z < 0 && transform.forward.x > 0)
                 {
+                    Debug.Log("SAL4");
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, 2), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, -2), transform.rotation);
                 }
             }
-            else
+            else if (transform.name.Contains("Black"))
+            {
+                Instantiate(Projectile_Black, transform.position, transform.rotation);
+            }
+            else if (transform.name.Contains("Red"))
             { 
                 Instantiate(Projectile, transform.position, transform.rotation);
             }
             timer = 0.0f;
         }
 
-        
-           
+        if (seconds_rapid_fire > 0.25f && Player_has_been_seen == true)
+        {
+            if(transform.name.Contains("Yellow"))
+            {
+                Instantiate(Projectile, transform.position, transform.rotation);
+            }
+            timer_rapid_fire = 0.0f;
+        }
+
+
         if (health <= 0)
         {
             explosion_sound.Play();
