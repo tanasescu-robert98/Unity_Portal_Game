@@ -138,7 +138,9 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            explosion_sound.Play();
+            if(Main_Menu.Audio_Enabled == true)
+                explosion_sound.Play();
+
             Instantiate(Explosion, transform.position, transform.rotation);
             if(transform.name.Contains("Blue"))
                 Destroy(gameObject.GetComponent<Enemy_Blue_Move_Script>().particle_system);

@@ -45,6 +45,8 @@ public class UIManager : MonoBehaviour
     public static bool Hint6_show = false;
 
     public GameObject Crosshair;
+
+    public static bool TAB_UI_Showing = false;
     //public Sprite Hint2_Industrial;
     //public Sprite Hint3_Industrial;
     // Start is called before the first frame update
@@ -73,6 +75,7 @@ public class UIManager : MonoBehaviour
         UI_Pickups_Counter.text = Industrial_Collected_Pickups.ToString() + "/" + Industrial_Max_Pickups.ToString() + " Pickups";
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            TAB_UI_Showing = true;
             Cursor.visible = true;
             MouseLook.isPlayerAbleToLook = false;
             Crosshair.SetActive(false);
@@ -118,6 +121,7 @@ public class UIManager : MonoBehaviour
             Hint6.gameObject.SetActive(false);
             UI_Text_Location.gameObject.SetActive(false);
             UI_Pickups_Counter.gameObject.SetActive(false);
+            TAB_UI_Showing = false;
         }
 
         if(isPlayerinIndustrial)

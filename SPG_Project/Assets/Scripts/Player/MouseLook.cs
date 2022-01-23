@@ -12,12 +12,17 @@ public class MouseLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(UIManager.TAB_UI_Showing == false && Main_Menu.Game_Started == true)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        
         if (isPlayerAbleToLook)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;

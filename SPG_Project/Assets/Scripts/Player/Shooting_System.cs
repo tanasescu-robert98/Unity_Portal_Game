@@ -34,7 +34,10 @@ public class Shooting_System : MonoBehaviour
     void Shoot()
     { 
         RaycastHit Hit;
-        gun_sound.Play();
+
+        if(Main_Menu.Audio_Enabled == true)
+            gun_sound.Play();
+
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out Hit))
         {
             if (Hit.transform.gameObject.name.Contains("Enemy"))
