@@ -113,6 +113,9 @@ public class Enemy : MonoBehaviour
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, 2), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, -2), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(0, 0, 2), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position, transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(0, 0, -2), transform.rotation);
                 }
                 else if (transform.forward.z < 0 && transform.forward.x < 0)
                 {
@@ -120,6 +123,9 @@ public class Enemy : MonoBehaviour
                     Instantiate(Projectile, transform.position + new Vector3(2, 0, 0), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(-2, 0, 0), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(2, 0, 0), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position, transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(-2, 0, 0), transform.rotation);
                 }
                 else if (transform.forward.z > 0 && transform.forward.x < 0)
                 {
@@ -127,6 +133,9 @@ public class Enemy : MonoBehaviour
                     Instantiate(Projectile, transform.position + new Vector3(2, 0, 0), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(-2, 0, 0), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(2, 0, 0), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position, transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(-2, 0, 0), transform.rotation);
                 }
                 else if (transform.forward.z < 0 && transform.forward.x > 0)
                 {
@@ -134,6 +143,9 @@ public class Enemy : MonoBehaviour
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, 2), transform.rotation);
                     Instantiate(Projectile, transform.position, transform.rotation);
                     Instantiate(Projectile, transform.position + new Vector3(0, 0, -2), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(0, 0, 2), transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position, transform.rotation);
+                    Instantiate(Projectile_Smoke, transform.position + new Vector3(0, 0, -2), transform.rotation);
                 }
             }
             timer_green = 0.0f;
