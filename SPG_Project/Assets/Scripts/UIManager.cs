@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     public static bool isPlayerinVillage;
 
     public TMP_Text UI_Text_Location;
-    public TMP_Text UI_Pickups_Counter;
+    public TMP_Text UI_Pickups_Counter; 
 
     public static int Industrial_Collected_Pickups;
     public static int Industrial_Max_Pickups;
@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     public Sprite Hint1_Industrial;
     public Sprite Hint2_Industrial;
     public Sprite Hint3_Industrial;
+    public Sprite Final_Industrial;
 
     public Sprite Hint1_Lake;
     public Sprite Hint2_Lake;
@@ -81,11 +82,23 @@ public class UIManager : MonoBehaviour
             Crosshair.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Black_Screen.SetActive(true);
+
+            
+
             if (isPlayerinIndustrial)
-            { 
-                Hint1.gameObject.SetActive(true);
-                Hint2.gameObject.SetActive(true);
-                Hint3.gameObject.SetActive(true);
+            {
+                if (Industrial_Collected_Pickups == Industrial_Max_Pickups)
+                {
+                    Hint2.gameObject.SetActive(true);
+                    Hint2_show = true;
+                    Hint2.sprite = Final_Industrial;
+                }
+                else
+                {
+                    Hint1.gameObject.SetActive(true);
+                    Hint2.gameObject.SetActive(true);
+                    Hint3.gameObject.SetActive(true);
+                }
             }
             else if(isPlayerinLake)
             {
@@ -128,21 +141,25 @@ public class UIManager : MonoBehaviour
         {
             UI_Text_Location.text = "Industrial Area";
             UI_Pickups_Counter.text = Industrial_Collected_Pickups.ToString() + "/" + Industrial_Max_Pickups.ToString() + " Pickups";
-            Hint1.rectTransform.position = new Vector3(Hint1.rectTransform.position.x, 450, Hint1.rectTransform.position.z);
-            Hint2.rectTransform.position = new Vector3(Hint2.rectTransform.position.x, 450, Hint2.rectTransform.position.z);
-            Hint3.rectTransform.position = new Vector3(Hint3.rectTransform.position.x, 450, Hint3.rectTransform.position.z);
-            if (!Hint1_show)
-                Hint1.sprite = Blur;
-            else
-                Hint1.sprite = Hint1_Industrial;
-            if (!Hint2_show)
-                Hint2.sprite = Blur;
-            else
-                Hint2.sprite = Hint2_Industrial;
-            if (!Hint3_show)
-                Hint3.sprite = Blur;
-            else
-                Hint3.sprite = Hint3_Industrial;
+
+            if (Industrial_Collected_Pickups != Industrial_Max_Pickups)
+            {
+                Hint1.rectTransform.position = new Vector3(Hint1.rectTransform.position.x, 450, Hint1.rectTransform.position.z);
+                Hint2.rectTransform.position = new Vector3(Hint2.rectTransform.position.x, 450, Hint2.rectTransform.position.z);
+                Hint3.rectTransform.position = new Vector3(Hint3.rectTransform.position.x, 450, Hint3.rectTransform.position.z);
+                if (!Hint1_show)
+                    Hint1.sprite = Blur;
+                else
+                    Hint1.sprite = Hint1_Industrial;
+                if (!Hint2_show)
+                    Hint2.sprite = Blur;
+                else
+                    Hint2.sprite = Hint2_Industrial;
+                if (!Hint3_show)
+                    Hint3.sprite = Blur;
+                else
+                    Hint3.sprite = Hint3_Industrial;
+            }
         }
         else if(isPlayerinLake)
         {

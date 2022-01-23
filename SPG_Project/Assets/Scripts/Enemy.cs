@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public GameObject Player;
     public GameObject Projectile;
     public GameObject Projectile_Black;
+    public GameObject Projectile_Smoke;
     public ParticleSystem Explosion;
     public LayerMask Mask_for_see;
     public AudioSource explosion_sound;
@@ -77,14 +78,17 @@ public class Enemy : MonoBehaviour
             if (transform.name.Contains("Black"))
             {
                 Instantiate(Projectile_Black, transform.position, transform.rotation);
+                Instantiate(Projectile_Smoke, transform.position, transform.rotation);
             }
             else if (transform.name.Contains("Red"))
             { 
                 Instantiate(Projectile, transform.position, transform.rotation);
+                Instantiate(Projectile_Smoke, transform.position, transform.rotation);
             }
             else if (transform.name.Contains("Blue"))
             {
                 Instantiate(Projectile, transform.position, transform.rotation);
+                Instantiate(Projectile_Smoke, transform.position, transform.rotation);
             }
             timer = 0.0f;
         }
@@ -98,7 +102,7 @@ public class Enemy : MonoBehaviour
             timer_rapid_fire = 0.0f;
         }
 
-        if(seconds_green > 0.5f && Player_has_been_seen == true)
+        if(seconds_green > 0.75f && Player_has_been_seen == true)
         {
             if (transform.name.Contains("Green"))
             {

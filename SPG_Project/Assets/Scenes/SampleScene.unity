@@ -1677,6 +1677,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -1763,6 +1767,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+--- !u!1 &149707777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6555162773014438729, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+  m_PrefabInstance: {fileID: 657075763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &149707778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149707777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 423a506fc3f924d41830448bb8d4c4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &171998057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +1955,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -2382,6 +2407,7 @@ MonoBehaviour:
   Hint1_Industrial: {fileID: 21300000, guid: 379d601809fc28a4dad179d01bb274a1, type: 3}
   Hint2_Industrial: {fileID: 21300000, guid: 2b40f9b8cd69b564b81e4a26a89309b0, type: 3}
   Hint3_Industrial: {fileID: 21300000, guid: 3a716a875a41d1340a8b387521790fe2, type: 3}
+  Final_Industrial: {fileID: 21300000, guid: e0376c2654413cc40aa0eb6be986331d, type: 3}
   Hint1_Lake: {fileID: 21300000, guid: 92eca044f7c1af64fa526b73453388c5, type: 3}
   Hint2_Lake: {fileID: 21300000, guid: 92eca044f7c1af64fa526b73453388c5, type: 3}
   Hint3_Lake: {fileID: 21300000, guid: 92eca044f7c1af64fa526b73453388c5, type: 3}
@@ -8905,6 +8931,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -14468,6 +14498,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -24443,6 +24477,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -30013,6 +30051,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -30117,6 +30159,143 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle_system: {fileID: 43337652}
+--- !u!1001 &657075763
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.99176955
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].time
+      value: 0.51031494
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].value
+      value: 0.3378373
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
+      value: 0.34064093
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 0.34064093
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].inSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outSlope
+      value: 0.34064093
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 0.34064093
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168825634461020793, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555162773014438729, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_Name
+      value: Projectile_Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -68.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -32.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 682.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770791333011380862, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 63136a926e4d074429e7a4a11b16a0c4, type: 3}
 --- !u!1 &662376285
 GameObject:
   m_ObjectHideFlags: 0
@@ -31633,6 +31812,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -36766,6 +36949,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -36970,6 +37157,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -37318,6 +37509,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -42652,6 +42847,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -43293,6 +43492,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -43430,6 +43633,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -43660,6 +43867,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -43991,6 +44202,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -45114,6 +45329,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -45235,6 +45454,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -45431,6 +45654,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -46011,6 +46238,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -46414,6 +46645,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -46787,6 +47022,14 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Mask_for_see.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4311972574388473706, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -47205,6 +47448,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -47634,6 +47881,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -47945,6 +48196,7 @@ GameObject:
   - component: {fileID: 1567403349}
   - component: {fileID: 1567403348}
   - component: {fileID: 1567403347}
+  - component: {fileID: 1567403352}
   m_Layer: 6
   m_Name: Door_Industrial_Pickup
   m_TagString: Untagged
@@ -48041,6 +48293,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1567403352
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567403346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1570814472
 GameObject:
   m_ObjectHideFlags: 0
@@ -48281,6 +48546,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -49314,6 +49583,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -55299,6 +55572,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -55854,6 +56131,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -55932,11 +56213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6567287325635651724, guid: 1eb346a74e25d9c4ca9904b6e0ddb944, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.767
+      value: -13.3
       objectReference: {fileID: 0}
     - target: {fileID: 6567287325635651724, guid: 1eb346a74e25d9c4ca9904b6e0ddb944, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.3291
+      value: 89.9
       objectReference: {fileID: 0}
     - target: {fileID: 6567287325635651724, guid: 1eb346a74e25d9c4ca9904b6e0ddb944, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56392,6 +56673,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -57100,6 +57385,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -57344,6 +57633,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -57432,6 +57725,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -57767,6 +58064,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -57987,6 +58288,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -63169,6 +63474,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
@@ -63370,6 +63679,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2059995886}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -63458,6 +63771,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: Mask_for_see.m_Bits
       value: 64
@@ -63997,6 +64314,14 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
+    - target: {fileID: 4311972574388473702, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
+      propertyPath: Mask_for_see.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4311972574388473706, guid: 45d3c0eab92f26d45a3a152daab0da2d, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -64068,11 +64393,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6567287325635651724, guid: 1eb346a74e25d9c4ca9904b6e0ddb944, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.767
+      value: -17.4
       objectReference: {fileID: 0}
     - target: {fileID: 6567287325635651724, guid: 1eb346a74e25d9c4ca9904b6e0ddb944, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.3291
+      value: 91.1
       objectReference: {fileID: 0}
     - target: {fileID: 6567287325635651724, guid: 1eb346a74e25d9c4ca9904b6e0ddb944, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64256,6 +64581,10 @@ PrefabInstance:
       propertyPath: Projectile_Black
       value: 
       objectReference: {fileID: 2059995886}
+    - target: {fileID: 6435466145996021647, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
+      propertyPath: Projectile_Smoke
+      value: 
+      objectReference: {fileID: 149707777}
     - target: {fileID: 8705965648372261671, guid: e47030f5b61d8aa4bb9494751142aa17, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b
       value: 1
