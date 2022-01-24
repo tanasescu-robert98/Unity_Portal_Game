@@ -25,5 +25,26 @@ public class Pickup_Script : MonoBehaviour
             pickup_sound.Play();
             Destroy(gameObject);
         }
+
+        if(other.tag == "Player" && gameObject.transform.name.Contains("Red_Orb"))
+        {
+            pickup_sound.Play();
+            Stand_Script.Red_Orb_Picked = true;
+            Destroy(gameObject);
+        }
+
+        if (other.tag == "Player" && gameObject.transform.name.Contains("Blue_Orb"))
+        {
+            pickup_sound.Play();
+            Stand_Script.Blue_Orb_Picked = true;
+            Destroy(gameObject);
+        }
+
+        if (other.tag == "Player" && gameObject.transform.name.Contains("Green_Orb"))
+        {
+            pickup_sound.Play();
+            Stand_Script.Green_Orb_Picked = true;
+            Destroy(gameObject);
+        }
     }
 }
