@@ -19,11 +19,14 @@ public class HP_Controller : MonoBehaviour
     {
         if (other.name.Contains("Projectile"))
         {
-            if(other.name.Contains("Black"))
-                currentHealth = currentHealth - 100;
-            else
-                currentHealth = currentHealth - 10;
-            healthBar.SetHealth(currentHealth);
+            if (other.tag != "Projectile_Player")
+            {
+                if (other.name.Contains("Black"))
+                    currentHealth = currentHealth - 100;
+                else
+                    currentHealth = currentHealth - 10;
+                healthBar.SetHealth(currentHealth);
+            }
         }   
     }
 }

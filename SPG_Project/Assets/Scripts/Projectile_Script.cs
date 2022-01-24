@@ -17,4 +17,12 @@ public class Projectile_Script : MonoBehaviour
         //.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 5 * Time.deltaTime);
         transform.position += transform.forward * 1;
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }

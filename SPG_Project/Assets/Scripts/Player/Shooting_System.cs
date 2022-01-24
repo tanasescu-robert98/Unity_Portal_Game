@@ -8,6 +8,9 @@ public class Shooting_System : MonoBehaviour
     public Camera fpsCam;
     public AudioSource gun_sound;
     public GameObject UI_Screen;
+    public GameObject Projectile;
+    public GameObject Projectile_Smoke;
+    public static int Kill_Count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,11 @@ public class Shooting_System : MonoBehaviour
                 MuzzleFlash.Play();
                 Shoot();
             }
+            else if(Input.GetMouseButtonDown(1)) //&& Kill_Count >= 3)
+            {
+                Kill_Count = 0;
+                Alternate_Shoot();
+            }
         }
     }
 
@@ -43,5 +51,11 @@ public class Shooting_System : MonoBehaviour
             if (Hit.transform.gameObject.name.Contains("Enemy"))
                 Hit.transform.gameObject.GetComponent<Enemy>().health -= 20;
         }
+    }
+
+    void Alternate_Shoot()
+    {
+        var projectile = Instantiate(Projectile, fpsCam.transform.position + fpsCam.transform.forward * 5, fpsCam.transform.rotation);
+        Instantiate(Projectile_Smoke, fpsCam.transform.position + fpsCam.transform.forward * 5, fpsCam.transform.rotation);
     }
 }

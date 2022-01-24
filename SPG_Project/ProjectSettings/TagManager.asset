@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Portal_Tag
+  - Projectile_Player
+  - Projectile_Enemy
   layers:
   - Default
   - TransparentFX

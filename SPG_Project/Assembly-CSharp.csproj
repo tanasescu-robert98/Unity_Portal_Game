@@ -67,7 +67,7 @@
     <Compile Include="Assets\Scripts\Player\Shooting_System.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Player\Crosshair.cs" />
-    <Compile Include="Assets\Enemy_Blue_Move_Script.cs" />
+    <Compile Include="Assets\Scripts\Enemy_Blue_Move_Script.cs" />
     <Compile Include="Assets\Scripts\Explosion_Sound.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -107,10 +107,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets\Move_Particle_Projectile.cs" />
+    <Compile Include="Assets\Scripts\Move_Particle_Projectile.cs" />
+    <Compile Include="Assets\Scripts\Stand_Script.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Stand_Script.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

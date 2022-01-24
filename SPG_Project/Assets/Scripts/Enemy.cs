@@ -154,6 +154,8 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            Shooting_System.Kill_Count++;
+
             if(Main_Menu.Audio_Enabled == true)
                 explosion_sound.Play();
 
@@ -172,5 +174,18 @@ public class Enemy : MonoBehaviour
     float CalculateHealth()
     {
         return health / maxhealth;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.name.Contains("Projectile"))
+        {
+            if (other.tag == "Projectile_Player")
+            {
+                health = health - 100;
+                Shooting_System.Kill_Count = -1;
+                other.gameObject.SetActive(false);
+            }
+        }
     }
 }
