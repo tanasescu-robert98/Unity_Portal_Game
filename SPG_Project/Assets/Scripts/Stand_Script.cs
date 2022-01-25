@@ -10,6 +10,10 @@ public class Stand_Script : MonoBehaviour
     public GameObject Green_Orb;
     public GameObject Door_To_Final_Place;
 
+    public GameObject Red_Orb_Spotlight;
+    public GameObject Blue_Orb_Spotlight;
+    public GameObject Green_Orb_Spotlight;
+
     public static bool Red_Orb_Picked = false;
     public static bool Blue_Orb_Picked = false;
     public static bool Green_Orb_Picked = false;
@@ -24,6 +28,9 @@ public class Stand_Script : MonoBehaviour
         Red_Orb.gameObject.SetActive(false);
         Blue_Orb.gameObject.SetActive(false);
         Green_Orb.gameObject.SetActive(false);
+        Red_Orb_Spotlight.SetActive(false);
+        Blue_Orb_Spotlight.SetActive(false);
+        Green_Orb_Spotlight.SetActive(false);
     }
 
     private void Update()
@@ -49,6 +56,7 @@ public class Stand_Script : MonoBehaviour
             if (Red_Orb_Picked)
             {
                 Red_Orb.gameObject.SetActive(true);
+                Red_Orb_Spotlight.SetActive(true);
                 is_Red_Orb_Placed = true;
             }
         }
@@ -57,6 +65,7 @@ public class Stand_Script : MonoBehaviour
             if (Blue_Orb_Picked)
             {
                 Blue_Orb.gameObject.SetActive(true);
+                Blue_Orb_Spotlight.SetActive(true);
                 is_Blue_Orb_Placed = true;
             }
         }
@@ -65,6 +74,7 @@ public class Stand_Script : MonoBehaviour
             if (Green_Orb_Picked)
             {
                 Green_Orb.gameObject.SetActive(true);
+                Green_Orb_Spotlight.SetActive(true);
                 is_Green_Orb_Placed = true;
             }
         }
