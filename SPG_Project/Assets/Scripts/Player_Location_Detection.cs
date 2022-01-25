@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player_Location_Detection : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    public Player_HP healthBar;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
@@ -62,6 +64,8 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.Hint5_show = false;
                     UIManager.Hint6_show = false;
                     Character_Movement.Jetpack_Equiped = false;
+                    HP_Controller.currentHealth = 100;
+                    healthBar.SetHealth(HP_Controller.currentHealth);
                     break;
             }
         }
