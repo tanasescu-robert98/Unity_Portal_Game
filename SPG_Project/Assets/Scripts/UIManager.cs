@@ -17,6 +17,9 @@ public class UIManager : MonoBehaviour
     public static int Industrial_Collected_Pickups;
     public static int Industrial_Max_Pickups;
 
+    public static int Lake_Collected_Pickups;
+    public static int Lake_Max_Pickups;
+
     public GameObject Black_Screen;
     public Image Hint1;
     public Image Hint2;
@@ -27,6 +30,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject HealthBar;
     public Image Projectile_Icon;
+    public Image Jetpack_Icon;
 
     public Sprite Blur;
     public Sprite Hint1_Industrial;
@@ -40,6 +44,9 @@ public class UIManager : MonoBehaviour
     public Sprite Hint4_Lake;
     public Sprite Hint5_Lake;
     public Sprite Hint6_Lake;
+    public Sprite Final_Lake;
+
+    public GameObject Canvas_Player;
 
     public static bool Hint1_show = false;
     public static bool Hint2_show = false;
@@ -49,6 +56,8 @@ public class UIManager : MonoBehaviour
     public static bool Hint6_show = false;
 
     public GameObject Crosshair;
+
+    public GameObject Weapons;
 
     public static bool TAB_UI_Showing = false;
     //public Sprite Hint2_Industrial;
@@ -73,12 +82,44 @@ public class UIManager : MonoBehaviour
         Projectile_Icon.gameObject.SetActive(true);
         Industrial_Collected_Pickups = 0;
         Industrial_Max_Pickups = 3;
+        Lake_Collected_Pickups = 0;
+        Lake_Max_Pickups = 6;
+        Jetpack_Icon.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         UI_Pickups_Counter.text = Industrial_Collected_Pickups.ToString() + "/" + Industrial_Max_Pickups.ToString() + " Pickups";
+
+        if (Lake_Collected_Pickups == Lake_Max_Pickups && isPlayerinLake == true)
+        {
+            Jetpack_Icon.gameObject.SetActive(true);
+            Character_Movement.Jetpack_Equiped = true;
+        }
+        else
+        {
+            Jetpack_Icon.gameObject.SetActive(false);
+            Character_Movement.Jetpack_Equiped = false;
+        }
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            Crosshair.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
+            HealthBar.SetActive(false);
+            Projectile_Icon.gameObject.SetActive(false);
+            Weapons.gameObject.SetActive(false);
+        }
+        if (Input.GetKey(KeyCode.X))
+        {
+            Crosshair.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
+            HealthBar.SetActive(true);
+            Projectile_Icon.gameObject.SetActive(true);
+            Weapons.gameObject.SetActive(true);
+        }
+
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             TAB_UI_Showing = true;
@@ -108,12 +149,21 @@ public class UIManager : MonoBehaviour
             }
             else if(isPlayerinLake)
             {
-                Hint1.gameObject.SetActive(true);
-                Hint2.gameObject.SetActive(true);
-                Hint3.gameObject.SetActive(true);
-                Hint4.gameObject.SetActive(true);
-                Hint5.gameObject.SetActive(true);
-                Hint6.gameObject.SetActive(true);
+                if (Lake_Collected_Pickups == Lake_Max_Pickups)
+                {
+                    Hint2.gameObject.SetActive(true);
+                    Hint2_show = true;
+                    Hint2.sprite = Final_Lake;
+                }
+                else
+                {
+                    Hint1.gameObject.SetActive(true);
+                    Hint2.gameObject.SetActive(true);
+                    Hint3.gameObject.SetActive(true);
+                    Hint4.gameObject.SetActive(true);
+                    Hint5.gameObject.SetActive(true);
+                    Hint6.gameObject.SetActive(true);
+                }
 
             }
             else if(isPlayerinSpawnRoom)
@@ -123,6 +173,8 @@ public class UIManager : MonoBehaviour
             //UI_Text_Location.text = "Industrial Area";
             UI_Text_Location.gameObject.SetActive(true);
             if(isPlayerinIndustrial)
+                UI_Pickups_Counter.gameObject.SetActive(true);
+            if(isPlayerinLake)
                 UI_Pickups_Counter.gameObject.SetActive(true);
         }
         else if(Input.GetKeyUp(KeyCode.Tab))
@@ -172,38 +224,42 @@ public class UIManager : MonoBehaviour
         else if(isPlayerinLake)
         {
             UI_Text_Location.text = "Lake Area";
+            UI_Pickups_Counter.text = Lake_Collected_Pickups.ToString() + "/" + Lake_Max_Pickups.ToString() + " Pickups";
 
-            if (!Hint1_show)
-                Hint1.sprite = Blur;
-            else
-                Hint1.sprite = Hint1_Lake;
-            if (!Hint2_show)
-                Hint2.sprite = Blur;
-            else
-                Hint2.sprite = Hint2_Lake;
-            if (!Hint3_show)
-                Hint3.sprite = Blur;
-            else
-                Hint3.sprite = Hint3_Lake;
-            if (!Hint4_show)
-                Hint4.sprite = Blur;
-            else
-                Hint4.sprite = Hint4_Lake;
-            if (!Hint5_show)
-                Hint5.sprite = Blur;
-            else
-                Hint5.sprite = Hint5_Lake;
-            if (!Hint6_show)
-                Hint6.sprite = Blur;
-            else
-                Hint6.sprite = Hint6_Lake;
+            if (Lake_Collected_Pickups != Lake_Max_Pickups)
+            {
+                if (!Hint1_show)
+                    Hint1.sprite = Blur;
+                else
+                    Hint1.sprite = Hint1_Lake;
+                if (!Hint2_show)
+                    Hint2.sprite = Blur;
+                else
+                    Hint2.sprite = Hint2_Lake;
+                if (!Hint3_show)
+                    Hint3.sprite = Blur;
+                else
+                    Hint3.sprite = Hint3_Lake;
+                if (!Hint4_show)
+                    Hint4.sprite = Blur;
+                else
+                    Hint4.sprite = Hint4_Lake;
+                if (!Hint5_show)
+                    Hint5.sprite = Blur;
+                else
+                    Hint5.sprite = Hint5_Lake;
+                if (!Hint6_show)
+                    Hint6.sprite = Blur;
+                else
+                    Hint6.sprite = Hint6_Lake;
 
-            Hint1.rectTransform.position = new Vector3(Hint1.rectTransform.position.x, 600, Hint1.rectTransform.position.z);
-            Hint2.rectTransform.position = new Vector3(Hint2.rectTransform.position.x, 600, Hint2.rectTransform.position.z);
-            Hint3.rectTransform.position = new Vector3(Hint3.rectTransform.position.x, 600, Hint3.rectTransform.position.z);
-            Hint4.rectTransform.position = new Vector3(Hint4.rectTransform.position.x, 200, Hint4.rectTransform.position.z);
-            Hint5.rectTransform.position = new Vector3(Hint5.rectTransform.position.x, 200, Hint5.rectTransform.position.z);
-            Hint6.rectTransform.position = new Vector3(Hint6.rectTransform.position.x, 200, Hint6.rectTransform.position.z);
+                Hint1.rectTransform.position = new Vector3(Hint1.rectTransform.position.x, 600, Hint1.rectTransform.position.z);
+                Hint2.rectTransform.position = new Vector3(Hint2.rectTransform.position.x, 600, Hint2.rectTransform.position.z);
+                Hint3.rectTransform.position = new Vector3(Hint3.rectTransform.position.x, 600, Hint3.rectTransform.position.z);
+                Hint4.rectTransform.position = new Vector3(Hint4.rectTransform.position.x, 200, Hint4.rectTransform.position.z);
+                Hint5.rectTransform.position = new Vector3(Hint5.rectTransform.position.x, 200, Hint5.rectTransform.position.z);
+                Hint6.rectTransform.position = new Vector3(Hint6.rectTransform.position.x, 200, Hint6.rectTransform.position.z);
+            }
         }
         else if(isPlayerinVillage)
         {

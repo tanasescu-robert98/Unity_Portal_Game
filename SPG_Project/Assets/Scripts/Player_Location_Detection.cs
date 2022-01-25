@@ -35,7 +35,7 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.Hint4_show = false;
                     UIManager.Hint5_show = false;
                     UIManager.Hint6_show = false;
-                    Character_Movement.Jetpack_Equiped = true;
+                    Character_Movement.Jetpack_Equiped = false;
                     break;
                 case "Village_Trigger":
                     UIManager.isPlayerinIndustrial = false;
@@ -48,7 +48,7 @@ public class Player_Location_Detection : MonoBehaviour
                     UIManager.Hint4_show = false;
                     UIManager.Hint5_show = false;
                     UIManager.Hint6_show = false;
-                    Character_Movement.Jetpack_Equiped = true;
+                    Character_Movement.Jetpack_Equiped = false;
                     break;
                 case "Spawn_Trigger":
                     UIManager.isPlayerinIndustrial = false;

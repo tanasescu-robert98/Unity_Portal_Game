@@ -30,7 +30,7 @@ public class Character_Movement : MonoBehaviour
 
     private void Start()
     {
-        Jetpack_Equiped = true;
+        Jetpack_Equiped = false;
     }
 
     // Update is called once per frame
