@@ -25,6 +25,9 @@ public class UIManager : MonoBehaviour
     public Image Hint5;
     public Image Hint6;
 
+    public GameObject HealthBar;
+    public Image Projectile_Icon;
+
     public Sprite Blur;
     public Sprite Hint1_Industrial;
     public Sprite Hint2_Industrial;
@@ -66,6 +69,8 @@ public class UIManager : MonoBehaviour
         Hint4.gameObject.SetActive(false);
         Hint5.gameObject.SetActive(false);
         Hint6.gameObject.SetActive(false);
+        HealthBar.SetActive(true);
+        Projectile_Icon.gameObject.SetActive(true);
         Industrial_Collected_Pickups = 0;
         Industrial_Max_Pickups = 3;
     }
@@ -83,7 +88,8 @@ public class UIManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Black_Screen.SetActive(true);
 
-            
+            HealthBar.SetActive(false);
+            Projectile_Icon.gameObject.SetActive(false);
 
             if (isPlayerinIndustrial)
             {
@@ -121,6 +127,8 @@ public class UIManager : MonoBehaviour
         }
         else if(Input.GetKeyUp(KeyCode.Tab))
         {
+            HealthBar.SetActive(true);
+            Projectile_Icon.gameObject.SetActive(true);
             Cursor.visible = false;
             MouseLook.isPlayerAbleToLook = true;
             Cursor.lockState = CursorLockMode.Locked;

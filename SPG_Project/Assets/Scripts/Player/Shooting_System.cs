@@ -31,7 +31,7 @@ public class Shooting_System : MonoBehaviour
                 MuzzleFlash.Play();
                 Shoot();
             }
-            else if(Input.GetMouseButtonDown(1)) //&& Kill_Count >= 3)
+            else if(Input.GetMouseButtonDown(1) && Kill_Count >= 3)
             {
                 Kill_Count = 0;
                 Alternate_Shoot();
