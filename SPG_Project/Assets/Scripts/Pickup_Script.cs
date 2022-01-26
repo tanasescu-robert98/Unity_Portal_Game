@@ -19,7 +19,7 @@ public class Pickup_Script : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player" && gameObject.transform.name.Contains("Industrial"))
+        if(other.tag == "Player" && gameObject.transform.name.Contains("Card"))
         {
             UIManager.Industrial_Collected_Pickups++;
             pickup_sound.Play();
