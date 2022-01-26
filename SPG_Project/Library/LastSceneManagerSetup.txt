@@ -3,3 +3,11 @@ sceneSetups:
   isLoaded: 1
   isActive: 1
   isSubScene: 0
+- path: Assets/RPG_FPS_game_assets_industrial/Map_v1.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0
+- path: Assets/race-track-lake/race_track_lake.unity
+  isLoaded: 1
+  isActive: 0
+  isSubScene: 0

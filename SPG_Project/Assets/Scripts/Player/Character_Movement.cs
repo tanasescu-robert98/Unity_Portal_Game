@@ -6,12 +6,16 @@ public class Character_Movement : MonoBehaviour
 {
     public CharacterController controller;
 
+    public GameObject Vrum_Vrum;
+
     public GameObject Portal_SpawnArea1;
     public GameObject Portal_SpawnArea2;
     public GameObject Portal_SpawnArea3;
     public GameObject Portal_World1;
     public GameObject Portal_World2;
     public GameObject Portal_World3;
+
+    public static bool Jetpack_Equiped;
 
     public float speed = 12f;
     public float gravity = -9.81f;
@@ -23,6 +27,11 @@ public class Character_Movement : MonoBehaviour
 
     Vector3 velocity;
     bool isGrounded;
+
+    private void Start()
+    {
+        Jetpack_Equiped = false;
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,12 +50,31 @@ public class Character_Movement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 25;
+            controller.Move(move * speed * Time.deltaTime);
+        }
+        else
+        {
+            speed = 12;
+            controller.Move(move * speed * Time.deltaTime);
+        }
 
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+        if (Input.GetButton("Jump") && !isGrounded && Jetpack_Equiped == true)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            Vrum_Vrum.gameObject.transform.position = controller.transform.position;
+        }
+        if (Input.GetKey(KeyCode.C))
+        {
+            velocity.y = -Mathf.Sqrt(jumpHeight * -12f * gravity);
+        }
+
 
         velocity.y += gravity * Time.deltaTime;
 
