@@ -26,7 +26,7 @@ public class Pickup_Script : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.tag == "Player" && gameObject.transform.name.Contains("Lake"))
+        if (other.tag == "Player" && gameObject.transform.name.Contains("Battery"))
         {
             UIManager.Lake_Collected_Pickups++;
             pickup_sound.Play();
