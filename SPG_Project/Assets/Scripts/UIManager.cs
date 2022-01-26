@@ -263,7 +263,7 @@ public class UIManager : MonoBehaviour
         }
         else if(isPlayerinVillage)
         {
-            UI_Text_Location.text = "Village Area";
+            UI_Text_Location.text = "Maze Area";
         }
         else if(isPlayerinSpawnRoom)
         {
